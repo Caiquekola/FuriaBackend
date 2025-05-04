@@ -23,7 +23,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint(endpoint)
-                .setAllowedOrigins("http://localhost:5173")
+                .setAllowedOrigins("https://furiafanchat.netlify.app")
                 .withSockJS();
     }
 
