@@ -12,7 +12,7 @@ import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "https://furiafanchat.netlify.app")
+@CrossOrigin(origins = "https://furiafanchat.netlify.app",allowedHeaders = "*", allowCredentials = "true")
 public class ChatController {
 
     private final ChatService chatService;

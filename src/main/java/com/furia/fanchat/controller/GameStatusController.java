@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = {"https://furiafanchat.netlify.app",
-                        "https://localhost:5173"})
+@CrossOrigin(origins = "https://furiafanchat.netlify.app")
 @RequestMapping("/api/game")
 public class GameStatusController {
 
