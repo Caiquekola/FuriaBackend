@@ -11,9 +11,7 @@ spring:
       ddl-auto: create
     show-sql: true
     database: postgresql
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+
 
 websocket:
   endpoint: /ws
