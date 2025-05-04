@@ -20,11 +20,20 @@ public class ChatController {
     @MessageMapping("/chat")
     @SendTo("/topic/messages")
     public ChatMessage handleMessage(ChatMessage message) {
-        if(message.getId() == null) {
+        if (message.getId() == null) {
             message.setId(UUID.randomUUID().toString());
         }
+
+        // Preencher senderId, senderUsername e senderAvatar se vierem nulos
+        if (message.getSenderId() == null && message.getSenderUsername() == null) {
+            message.setSenderId("anonymous");
+            message.setSenderUsername("Anônimo");
+            message.setSenderAvatar("https://i.pravatar.cc/150?u=unknown");
+        }
+
         return chatService.saveAndBroadcast(message);
     }
+
 
     @GetMapping("/api/messages")
     public List<ChatMessage> getRecentMessages() {
