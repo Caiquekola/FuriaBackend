@@ -8,7 +8,6 @@ import lombok.Data;
 @Table(name = "games_status")
 public class GameStatus {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String tournament;
     private String team1Name;
