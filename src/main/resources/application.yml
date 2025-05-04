@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://kJXZwivmAhYzWY5bGQ20UfMSXIvb9QP9@dpg-d0bmd1muk2gs73fvsjg0-a:5432/furia_3uue
+    url: jdbc:postgresql://dpg-d0bmd1muk2gs73fvsjg0-a:5432/furia_3uue
     username: ${DB_USER}
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
