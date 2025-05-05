@@ -38,4 +38,12 @@ public class MatchMessageController {
         // Envia para todos que estão conectados
         messagingTemplate.convertAndSend("/topic/match/" + matchId, message);
     }
+
+    // Salvar mensagem de uma partida
+    @PostMapping("/{matchId}")
+    public MatchMessage saveMessage(@PathVariable String matchId, @RequestBody MatchMessage message) {
+        message.setMatchId(matchId);
+        message.setTimestamp(LocalDateTime.now());
+        return repository.save(message);
+    }
 }
